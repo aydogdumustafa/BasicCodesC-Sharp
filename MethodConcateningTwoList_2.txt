@@ -1,0 +1,34 @@
+namespace Strings_10
+{
+    class Program
+
+    //Write a function that combines two lists by alternatingly taking elements, e.g. [a, b, c], [1,2,3] → [a,1, b,2, c,3]
+
+    {
+
+        public static List<int> SumOfList(List<int> numbers, List<int> numbersTwo)
+        {
+            var sumOfLists = new List<int>() { }; // New list for sum  
+            for (int i = 0; i < numbers.Count || i < numbersTwo.Count; ++i)
+            {
+                sumOfLists.Add(numbers[i]);
+                sumOfLists.Add(numbersTwo[i]);
+                // adding first list
+            }
+           
+            return sumOfLists;
+        }
+
+        static void Main(string[] args)
+        {
+            var numbers = new List<int>() { 1, 3, 5 };
+            var numbersTwo = new List<int>() { 115, 678, 999 };
+            var sumOfLists = SumOfList(numbers, numbersTwo);
+            foreach (var i in sumOfLists)
+            {
+                Console.Write(i + " ");
+            }
+            Console.ReadLine();
+        }
+    }
+}

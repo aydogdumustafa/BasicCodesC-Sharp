@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Schema;
+
+namespace Strings_9
+{
+    class Program
+
+    //Write a function that concatenates two lists. [a,b,c], [1,2,3] → [a,b,c,1,2,3]
+
+    {
+
+        public static List<int> SumOfList(List<int> numbers, List<int> numbersTwo)
+        {
+            var sumOfLists = new List<int>() { }; // New list for sum  
+            for (int i = 0; i < numbers.Count; ++i)
+            {
+                sumOfLists.Add(numbers[i]);// adding first list
+            }
+            for (int i = 0; i < numbersTwo.Count; ++i)
+            {
+                sumOfLists.Add(numbersTwo[i]);//adding second list
+            }
+            return sumOfLists;
+        }
+
+        static void Main(string[] args)
+        {
+            var numbers = new List<int>() { 1, 3, 5, 7, 1, 7, 9 };
+            var numbersTwo = new List<int>() { 115, 678, 999, 1244, 98236 };
+            var sumOfLists = SumOfList(numbers, numbersTwo);
+            foreach (var i in sumOfLists)
+            {
+                Console.Write(i + " ");
+            }
+            Console.ReadLine();
+        }
+    }
+}
