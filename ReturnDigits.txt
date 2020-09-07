@@ -1,0 +1,36 @@
+//Write a function that takes a number and returns a list of its digits. 
+//So for 2342 it should return [2,3,4,2].
+
+
+using System;
+using System.Collections.Generic;
+
+namespace ListsStrings2
+{
+    class Program
+    {
+
+        static public List<char> numberToList(int number) // has to be List<char> , string[i] --> takes char type from string
+        {
+            string sNumber = Convert.ToString(number); //convert int to string
+            List<char> listedNumbers = new List<char>();
+
+            for (int i = 0; i < sNumber.Length; i++)
+            {
+                listedNumbers.Add(sNumber[i]);// add char to list
+            }
+            return listedNumbers;   //returns list
+        }
+
+        static void Main(string[] args)
+        {
+            int number = 2345;
+
+            foreach (var i in numberToList(number)) 
+            {
+                Console.Write(i + " ");
+            }
+            Console.ReadLine();
+        }
+    }
+}
